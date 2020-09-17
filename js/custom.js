@@ -53,6 +53,23 @@
 
 	});
 
+	//filter
+	$(document).ready(function(){
+	//isotope
+    var $grid=$(".grid").isotope({
+        itemSelector:".grid-items",
+        layoutMode:"fitRows"
+
+    });
+
+    //filter items on button click
+    $(".button-group").on("click","button",function(){
+        var filterValue = $(this).attr("data-filter"); 
+        $grid.isotope({filter:filterValue});
+	})
+    
+	});
+
 	/* ..............................................
     Gallery
     ................................................. */
